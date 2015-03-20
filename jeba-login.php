@@ -22,10 +22,6 @@ if ( ! class_exists( 'Jeba_Limit_Login_Attempts' ) ) {
             add_filter( 'authenticate', array( $this, 'check_attempted_login' ), 30, 3 );
             add_action( 'wp_login_failed', array( $this, 'login_failed' ), 10, 1 );
         }
-
-        /**
-         * Lock login attempts of failed login limit is reached
-         */
         public function check_attempted_login( $user, $username, $password ) {
             if ( get_transient( $this->transient_name ) ) {
                 $datas = get_transient( $this->transient_name );
@@ -42,10 +38,6 @@ if ( ! class_exists( 'Jeba_Limit_Login_Attempts' ) ) {
             return $user;
         }
 
-
-        /**
-         * Add transient
-         */
         public function login_failed( $username ) {
             if ( get_transient( $this->transient_name ) ) {
                 $datas = get_transient( $this->transient_name );
@@ -60,13 +52,6 @@ if ( ! class_exists( 'Jeba_Limit_Login_Attempts' ) ) {
                 set_transient( $this->transient_name, $datas , $this->lockout_duration );
             }
         }
-
-
-        /**
-         * Return difference between 2 given dates
-         * @param  int      $time   Date as Unix timestamp
-         * @return string           Return string
-         */
         private function when( $time ) {
             if ( ! $time )
                 return;
@@ -97,7 +82,6 @@ if ( ! class_exists( 'Jeba_Limit_Login_Attempts' ) ) {
     }
 }
 
-//Enable it:
 new Jeba_Limit_Login_Attempts();
  
  
