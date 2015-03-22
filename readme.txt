@@ -6,11 +6,11 @@ Stable tag: 1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This is Jeba Limit Login Attempts wordpress plugin. Automatically lock the system for 30 minutes if an user attempt to login and fail after 3 try.
+This is Jeba Limit Login Attempts wordpress plugin. Automatically lock the system for 30 minutes if a user attempts to login and fails after 3 tries.
 
 == Description ==
 
-This is Jeba Limit Login Attempts wordpress plugin. WordPress Login security and problems when a hacker use a script to guess the username / password. So I did this following class which lock the system for 30 minutes if an user attempt to login and fail after 3 try.
+This is Jeba Limit Login Attempts wordpress plugin. WordPress Login security and problems when a hacker use a script to guess the username / password. So I did this following class which lock the system for 30 minutes if a he attempts to login and fails after 3 tries.
 
 
 Jeba more plugin:
